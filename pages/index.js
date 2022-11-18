@@ -19,6 +19,7 @@ export default Index
 
 export async function getStaticProps() {
   const siteConfig = await import(`../data/config.json`)
+
   return {
     props: {
       title: siteConfig.default.title,
