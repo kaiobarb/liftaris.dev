@@ -7,14 +7,10 @@ import styles from "../../styles/Blog.module.css"
 import glob from "glob"
 import Layout from "../../components/Layout"
 
-
-
 function reformatDate(fullDate) {
   const date = new Date(fullDate)
   return date.toDateString().slice(4)
 }
-
-
 
 export default function BlogTemplate({ frontmatter, markdownBody, siteTitle }) {
   return (

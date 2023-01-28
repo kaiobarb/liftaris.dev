@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import BlogList from '../components/BlogList'
 
 const Index = props => {
+
   return (
     <Layout
       pathname="/"
