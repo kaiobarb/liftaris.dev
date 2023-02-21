@@ -33,7 +33,7 @@ export async function getStaticProps() {
   const posts = keys.map((key, index) => {
     // dynamically creating the post slug
     // from the file name
-    const slug = key
+    const filename = key
       .replace(/^.*[\\\/]/, "")
       .split(".")
       .slice(0, -1)
@@ -48,7 +48,7 @@ export async function getStaticProps() {
     return {
       frontmatter: document.data,
       markdownBody: document.content,
-      slug,
+      filename,
     }
   })
 
