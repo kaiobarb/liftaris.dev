@@ -1,16 +1,16 @@
 import "../styles/globals.css"
-import { Work_Sans } from "@next/font/google"
+import { Spectral } from "@next/font/google"
 
-// importing the Work Sans font with
+// importing the Spectral font with
 // the Next.js 13 Font Optimization Feature
-const workSans = Work_Sans({
+const spectral = Spectral({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 })
 
 function MyApp({ Component, pageProps }) {
-  return <main className={workSans.className}>
+  return <main className={spectral.className}>
     <Component {...pageProps} />
   </main>
 }

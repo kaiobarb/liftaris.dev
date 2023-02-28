@@ -11,8 +11,11 @@ export default function Layout(props) {
       siteTitle={props.siteTitle}
       siteDescription={props.siteDescription}
     />
-    <Header siteTitle={props.siteTitle} />
-    <div className={styles.content}>{props.children}</div>
+    
+    <div className={styles.content}>
+      <Header siteTitle={props.siteTitle} />
+      {props.children}
+    </div>
   </section>
   )
 }

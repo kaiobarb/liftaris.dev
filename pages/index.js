@@ -1,6 +1,7 @@
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import BlogList from '../components/BlogList'
+import Canvas from '../components/Canvas'
 
 const Index = props => {
 
@@ -10,6 +11,9 @@ const Index = props => {
       siteTitle={props.title}
       siteDescription={props.description}
     >
+      <section className='canvas'>
+        <Canvas />
+      </section>
       <section>
         <BlogList allBlogs={props.allBlogs}/>
       </section>
