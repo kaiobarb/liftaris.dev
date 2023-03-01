@@ -1,5 +1,8 @@
 import { useRef, useEffect } from 'react';
 
+// Credit to Juhani Halkomäki for the original code: https://openprocessing.org/sketch/1555443
+// I've made some changes to the original so that it runs in vanilla JS and React, but the core logic is the same
+
 class Point {
     constructor({ x, y, radius, damping, friction, parent, color = 0 }) {
         this.x = x;
@@ -151,9 +154,9 @@ const Canvas = () => {
             // getX and getY are DOM element methods which 
             // return the coordinates relative to the element
 
-            //TODO: remove hardcoded offset
-            mouseX = e.x - 170;
-            mouseY = e.y - 30
+            console.log(e);
+            mouseX = e.x - e.srcElement.offsetLeft;
+            mouseY = e.y - e.srcElement.offsetTop;
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -199,15 +202,6 @@ const Canvas = () => {
 
             ctx.translate(hw, hh);
 
-            // Don't know what this does
-            for (let i = 0, l = joints.length; i < l; i++) {
-                let dx = joints[i].pointB.x - joints[i].pointA.x;
-                let dy = joints[i].pointB.y - joints[i].pointA.y;
-
-                let denom = Math.pow(Math.pow(dx, 2) + Math.pow(dy, 2), 1 / 2);
-                joints[i].dist += 1 / denom;
-            }
-
             const mx = mouseX - hw;
             const my = mouseY - hh;
 
@@ -222,18 +216,17 @@ const Canvas = () => {
 
                 ////////////////////////////
                 // Move points towards center
-                let gravity = Math.atan2(-pointA.y, -pointA.x) * 0.1;
-                // let gravity = Math.atan2(hh - pointA.y, hw - pointA.x) * 0.1;
-                let force = 0.2 * gravity;
-                let fx = force * Math.cos(gravity);
-                let fy = force * Math.sin(gravity);
-
+                // let gravity = Math.atan2(-pointA.y, -pointA.x) * 0.1;
+                // // let gravity = Math.atan2(hh - pointA.y, hw - pointA.x) * 0.1;
+                // let force = 0.2 * gravity;
+                // let fx = force * Math.cos(gravity);
+                // let fy = force * Math.sin(gravity);
                 // pointA.addForce(fx, fy);
 
                 // mouse interaction
                 pointA.collide(mx, my, 80);
 
-                //
+                // 
                 for (let j = i + 1; j < l; j++) {
                     let pointB = points[j];
                     let repelForce = pointA.repel(pointB.x, pointB.y, 10, 0.1);
@@ -261,7 +254,6 @@ const Canvas = () => {
             ctx.fill();
 
             ctx.translate(-hw, -hh); // reset translation back to original position
-            ctx.fillText(`Mouse: ${mouseX}, ${mouseY}`, 10, 10);
 
             animation = requestAnimationFrame(draw);
         };
