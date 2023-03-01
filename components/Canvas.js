@@ -153,8 +153,6 @@ const Canvas = () => {
         const handleMouseMove = (e) => {
             // getX and getY are DOM element methods which 
             // return the coordinates relative to the element
-
-            console.log(e);
             mouseX = e.x - e.srcElement.offsetLeft;
             mouseY = e.y - e.srcElement.offsetTop;
         };

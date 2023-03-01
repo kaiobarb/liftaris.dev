@@ -20,6 +20,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
     border: #000 solid 30px;
+    filter: invert(0%);
+    transition: filter 0.5s ease;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,7 +29,8 @@ body {
         filter: invert(100%);
         background-color: #000;
     }
-    .dark > img {
+
+    .dark img {
         filter: invert(100%);
     }
 }
