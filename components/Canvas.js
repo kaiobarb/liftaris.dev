@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-
+import styles from '../styles/Canvas.module.css';
 // Credit to Juhani Halkomäki for the original code: https://openprocessing.org/sketch/1555443
 // I've made some changes to the original so that it runs in vanilla JS and React, but the core logic is the same
 
@@ -77,11 +77,6 @@ class Point {
         const { x, y, oldx, oldy, friction, radius } = this;
         const vx = (x - oldx) * friction;
         const vy = (y - oldy) * friction;
-
-        left += radius;
-        top += radius;
-        right -= radius;
-        bottom -= radius;
 
         if (x > right) {
             this.x = right;
@@ -171,7 +166,8 @@ const Canvas = () => {
             ctx.lineWidth = 10;
 
             const pointCount = 80;
-            const radius = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3;
+            // const radius = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3;
+            const radius = 300;
             for (let i = 0; i < pointCount; i++) {
                 const angle = (i / pointCount) * 2 * Math.PI;
                 const x = Math.cos(angle) * radius;
@@ -265,7 +261,7 @@ const Canvas = () => {
         }
     }, []);
 
-    return <canvas width={900} height={900} ref={canvasRef} />;
+    return <canvas className={styles.canvas} width={900} height={900} ref={canvasRef} />;
 };
 
 export default Canvas;
