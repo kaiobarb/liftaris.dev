@@ -159,6 +159,7 @@ const Canvas = () => {
     }, [])
 
     useEffect(() => {
+        if (!canvasRef) return;
         const canvas = canvasRef.current;
 
         const handleResize = () => {
@@ -177,6 +178,7 @@ const Canvas = () => {
 
     useEffect(() => {
         const setup = () => {
+            if (!canvasRef.current) return;
             const ctx = canvasRef.current.getContext('2d'); // create canvas context
             // set line styles so that it's easier to see the moving points and joints
             ctx.strokeStyle = 'black';
@@ -204,6 +206,7 @@ const Canvas = () => {
         };
 
         const draw = () => {
+            if (!canvasRef.current) return;
             const ctx = canvasRef.current.getContext('2d'); // create canvas context
             const hw = ctx.canvas.width / 2;
             const hh = ctx.canvas.height / 2;

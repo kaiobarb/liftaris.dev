@@ -25,7 +25,5 @@
   .content {
     display: flex;
     justify-content: flex-start;
-    width: 100%;
-    max-height: 100vh;
   }
 }

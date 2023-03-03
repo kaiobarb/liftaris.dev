@@ -50,7 +50,7 @@ export default function Header(props) {
           <h1>{props.siteTitle}</h1>
           <h5 style={{ color: "#555", fontWeight: 20, textAlign: "center" }}>Barbosa-Chifan</h5>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/about" passHref>
           <h2>About</h2>
         </Link>
         <Link href="/" passHref>

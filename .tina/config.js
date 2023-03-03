@@ -38,11 +38,38 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          {
+            type: 'image',
+            label: 'Hero image',
+            name: 'hero_image',
+          },
         ],
         ui: {
           router: ({ document }) => `/blog/${document._sys.filename}`,
           // This is an DEMO router. You can remove this to fit your site
           // router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        },
+      },
+      {
+        name: "about",
+        label: "About",
+        path: "about",
+        format: "md",
+        fields: [
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+          {
+            type: 'image',
+            label: 'Profile image',
+            name: 'profile_image',
+          },
+        ],
+        ui: {
+          router: ({ document }) => '/about',
         },
       },
     ],
