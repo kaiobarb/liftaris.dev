@@ -159,6 +159,23 @@ const Canvas = () => {
     }, [])
 
     useEffect(() => {
+        const canvas = canvasRef.current;
+
+        const handleResize = () => {
+            const computed = getComputedStyle(canvas.parentNode);
+            const w = parseInt(computed.width, 10);
+            const h = parseInt(computed.height, 10);
+            canvas.width = w;
+            canvas.height = h;
+        };
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
         const setup = () => {
             const ctx = canvasRef.current.getContext('2d'); // create canvas context
             // set line styles so that it's easier to see the moving points and joints
@@ -261,7 +278,9 @@ const Canvas = () => {
         }
     }, []);
 
-    return <canvas className={styles.canvas} width={900} height={900} ref={canvasRef} />;
+    return (<div className={styles.canvas} >
+        <canvas width={900} height={900} ref={canvasRef} />
+    </div>);
 };
 
 export default Canvas;

@@ -11,7 +11,7 @@ const Index = props => {
       siteTitle={props.title}
       siteDescription={props.description}
     >
-      <section className='canvas'>
+      <section style={{flex: 1, display:"flex", justifyItems:"stretch"}}>
         <Canvas />
       </section>
       <section>
