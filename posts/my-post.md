@@ -9,4 +9,3 @@ Websites...
 
 I've built quite a few over the years, and it's never been a pleasant experience.
 
-![Bellcurve meme about how building websites as a beginner is the same as a senior]()

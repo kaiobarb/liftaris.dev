@@ -1,12 +1,13 @@
 
 
 import Image from "next/image"
-import ReactMarkdown from "react-markdown"
 import styles from "../../styles/Blog.module.css"
 import glob from "glob"
 import Layout from "../../components/Layout"
 import { useTina } from 'tinacms/dist/react'
 import client from "../../.tina/__generated__/client"
+import { useEffect } from "react"
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 function reformatDate(fullDate) {
   const date = new Date(fullDate)
@@ -19,6 +20,9 @@ export default function BlogTemplate(props) {
     variables: props.variables,
     data: props.data,
   })
+  useEffect(() => {
+    console.log("props: ", props)
+  }, [])
 
   return (
     <Layout siteTitle={props.siteTitle}>
@@ -27,7 +31,7 @@ export default function BlogTemplate(props) {
           <Image
             width="1920"
             height="1080"
-            src={data.post.hero_image}
+            src={data.post.hero_image ? data.post.hero_image : "/images/hero_image.jpg"}
             alt={`blog_hero_${data.post.title}`}
           />
         </figure>
@@ -36,7 +40,7 @@ export default function BlogTemplate(props) {
           <h3>{reformatDate(data.post.date)}</h3>
         </div>
         <div className={styles.blog__body}>
-          <ReactMarkdown>{data.post.body}</ReactMarkdown>
+          <TinaMarkdown content={data.post.body} />
         </div>
         <h2 className={styles.blog__footer}>Written By: {data.post.author}</h2>
       </article>

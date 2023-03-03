@@ -1,5 +1,4 @@
 import Link from "next/link"
-import ReactMarkdown from "react-markdown"
 import styles from "../styles/BlogList.module.css"
 import Image from "next/image"
 import { useEffect } from "react"
@@ -28,7 +27,7 @@ const BlogList = ({ allBlogs }) => {
         {allBlogs && allBlogs.length > 0 &&
           allBlogs.map(post => (
             <li key={post.filename.split(' ').join()}>
-              <Link href={{ pathname: `/blog/${post.slug}` }} className={styles.blog__link}>
+              <Link href={{ pathname: `/blog/${post.filename}` }} className={styles.blog__link}>
                 <div className={styles.hero_image}>
                   <Image
                     width={384}
@@ -40,7 +39,6 @@ const BlogList = ({ allBlogs }) => {
                 <div className={styles.blog__info}>
                   <h2>{post.frontmatter.title}</h2>
                   <code>{reformatDate(post.frontmatter.date)}</code>
-                  {/* <ReactMarkdown disallowedElements={["a"]}>{truncateSummary(post.markdownBody)}</ReactMarkdown> */}
                 </div>
               </Link>
             </li>
