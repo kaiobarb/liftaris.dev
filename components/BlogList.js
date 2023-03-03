@@ -15,31 +15,38 @@ function reformatDate(fullDate) {
 
 const BlogList = ({ allBlogs }) => {
   useEffect(() => {
-    console.log("allBlogs: ", allBlogs.length)
+    console.log("allBlogs: ", allBlogs)
   }, [])
   return (
-    <ul>
-      {allBlogs && allBlogs.length > 0 &&
-        allBlogs.map(post => (
-          <li key={post.slug}>
-            <Link href={{ pathname: `/blog/${post.slug}` }} className={styles.blog__link}>
-              <div className={styles.hero_image}>
-                <Image
-                  width={384}
-                  height={288}
-                  src={post.frontmatter.hero_image}
-                  alt={post.frontmatter.hero_image}
-                />
-              </div>
-              <div className={styles.blog__info}>
-                <h2>{post.frontmatter.title}</h2>
-                <h3>{reformatDate(post.frontmatter.date)}</h3>
-                <ReactMarkdown disallowedElements={["a"]}>{truncateSummary(post.markdownBody)}</ReactMarkdown>
-              </div>
-            </Link>
-          </li>
-        ))}
-    </ul>
+    <div className={styles.bloglist}>
+      <div className={styles.bloglist__header}>
+        <h1>
+          Notes
+        </h1>
+      </div>
+      <ul>
+        {allBlogs && allBlogs.length > 0 &&
+          allBlogs.map(post => (
+            <li key={post.filename.split(' ').join()}>
+              <Link href={{ pathname: `/blog/${post.slug}` }} className={styles.blog__link}>
+                <div className={styles.hero_image}>
+                  <Image
+                    width={384}
+                    height={288}
+                    src={post.frontmatter.hero_image}
+                    alt={post.frontmatter.hero_image}
+                  />
+                </div>
+                <div className={styles.blog__info}>
+                  <h2>{post.frontmatter.title}</h2>
+                  <code>{reformatDate(post.frontmatter.date)}</code>
+                  {/* <ReactMarkdown disallowedElements={["a"]}>{truncateSummary(post.markdownBody)}</ReactMarkdown> */}
+                </div>
+              </Link>
+            </li>
+          ))}
+      </ul>
+    </div>
   )
 }
 

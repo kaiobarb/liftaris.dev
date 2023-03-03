@@ -1,37 +1,70 @@
+.nav {
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.nav h2,
+.nav h5 {
+  margin-bottom: 0;
+  /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0); */
+}
+
+@media (min-width: 400px) {
   .nav {
-    padding: 1.5rem 1.25rem;
-    border-bottom: 1px solid #ebebeb;
     display: flex;
+    padding: 0.5rem 1.25rem;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    height: 100px;
-    width: 100%;
+    text-align: center;
   }
-  .nav h1 {
+
+  .nav h2,
+  .nav h5 {
     margin-bottom: 0;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0);
+    /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0); */
+  }
+}
 
-  }
-  .nav h1:hover {
-    cursor: pointer;
-    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
-    animation: shake 5s is infinite;
+.nav svg {
+  cursor: pointer;
+  height: 4rem;
+  fill: #000000;
+}
+
+.nav svg:hover {
+  transform: scale(1.15);
+  transition: transform 0.1s ease;
+}
+
+.nav h1 {
+  margin-bottom: 0;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0);
+
+}
+
+.nav h1:hover {
+  cursor: pointer;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+  animation: shake 5s is infinite;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    padding: 2rem 1.50rem;
+    height: 100%;
+    border-right: 30px solid #000000;
+    border-bottom: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
   }
 
-  @media (min-width: 768px) {
-    .header {
-      height: 100vh;
-      left: 0;
-      top: 0;
-    }
-    .nav {
-      padding: 2rem.50rem;
-      height: 100%;
-      border-right: 30px solid #000000;
-      border-bottom: none;
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  .nav h2 {
+    margin-bottom: 1em;
   }
+}

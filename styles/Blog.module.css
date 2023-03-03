@@ -16,19 +16,6 @@
     object-position: center;
 }
 
-.blog__info {
-    padding: 1.5rem 1.25rem;
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto;
-}
-.blog__info h1 {
-    margin-bottom: 0.66rem;
-}
-.blog__info h3 {
-    margin-bottom: 0;
-}
-
 .blog__body {
     width: 100%;
     padding: 0 1.25rem;
