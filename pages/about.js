@@ -7,7 +7,7 @@ export default function About() {
   return (
     <Layout siteTitle={"KAIO"}>
       <article>
-        <h1>About</h1>
+        <h1>About Me</h1>
       </article>
     </Layout>
   )
