@@ -10,7 +10,6 @@
 .nav h2,
 .nav h5 {
   margin-bottom: 0;
-  /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0); */
 }
 
 @media (min-width: 400px) {
@@ -26,7 +25,6 @@
   .nav h2,
   .nav h5 {
     margin-bottom: 0;
-    /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0); */
   }
 }
 
@@ -50,7 +48,6 @@
 .nav h1:hover {
   cursor: pointer;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
-  animation: shake 5s is infinite;
 }
 
 @media (min-width: 768px) {

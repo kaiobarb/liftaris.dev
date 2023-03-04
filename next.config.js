@@ -1,16 +1,16 @@
 module.exports = {
 
-    webpack: function (config) {
-  
-        config.module.rules.push({
+  webpack: function (config) {
 
-        test: /\.md$/,
+    config.module.rules.push({
 
-        use: 'raw-loader',
+      test: /\.md$/,
 
-        })
-  
-      return config
-  
-    }, 
+      use: 'raw-loader',
+
+    })
+
+    return config
+
+  },
 }

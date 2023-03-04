@@ -20,9 +20,6 @@ export default function BlogTemplate(props) {
     variables: props.variables,
     data: props.data,
   })
-  useEffect(() => {
-    console.log("props: ", props)
-  }, [])
 
   return (
     <Layout siteTitle={props.siteTitle}>
@@ -31,16 +28,16 @@ export default function BlogTemplate(props) {
           <Image
             width="800"
             height="450"
-            src={data.post.hero_image ? data.post.hero_image : "/images/hero_image.jpg"}
-            alt={`blog_hero_${data.post.title}`}
+            src={data.post ? data.post.hero_image : ""}
+            alt={`blog_hero_${data.post ? data.post.title : "fallback title"}`}
           />
         </figure>
         <div className={styles.blog__info}>
-          <h1>{data.post.title}</h1>
-          <h3>{reformatDate(data.post.date)}</h3>
+          <h1>{data.post ? data.post.title : "Article Title Not found" }</h1>
+          <h3>{reformatDate(data.post ? data.post.date : "NO DATE")}</h3>
         </div>
         <div className={styles.blog__body}>
-          <TinaMarkdown content={data.post.body} />
+          <TinaMarkdown content={data.post ? data.post.body : ""} />
         </div>
       </article>
     </Layout>
