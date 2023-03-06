@@ -19,9 +19,10 @@ const BlogList = ({ allBlogs }) => {
   return (
     <div className={styles.bloglist}>
       <div className={styles.bloglist__header}>
-        <h1>
-          Notes
-        </h1>
+        <h2>
+          Notes, posts, and rambles
+        </h2>
+        {/* <h3 style={{marginBottom: 10}}>There {allBlogs.length == 1 ? `is ${allBlogs.length} post`: `are ${allBlogs.length} posts`}</h3> */}
       </div>
       <ul>
         {allBlogs && allBlogs.length > 0 &&

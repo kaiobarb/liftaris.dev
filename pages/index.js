@@ -14,7 +14,7 @@ const Index = props => {
       <section style={{flex: 1, display:"flex", justifyItems:"stretch"}}>
         <Canvas />
       </section>
-      <section>
+      <section style={{backgroundColor:"black"}}>
         <BlogList allBlogs={props.allBlogs}/>
       </section>
     </Layout>
