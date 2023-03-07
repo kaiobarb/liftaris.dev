@@ -73,7 +73,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   // getting all .md files from the posts directory
-  const blogs = glob.sync(`posts/**/*.md`)
+  const blogs = glob.sync(`content/posts/**/*.md`)
 
   // converting the file names to their slugs
   const blogSlugs = blogs.map(file =>

@@ -26,7 +26,7 @@ export default Index
 export async function getStaticProps() {
   const siteConfig = await import(`../data/config.json`)
 
-  const webpackContext = require.context("../posts", true, /\.md$/)
+  const webpackContext = require.context("../content/posts", true, /\.md$/)
   // the list of file names contained
   // inside the "posts" directory
   const keys = webpackContext.keys()

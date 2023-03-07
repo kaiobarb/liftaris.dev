@@ -50,13 +50,10 @@ export default function Header(props) {
           <h1>{props.siteTitle}</h1>
           <h5 style={{ color: "#555", fontWeight: 20, textAlign: "center" }}>Barbosa-Chifan</h5>
         </Link>
-        <Link href="/about" passHref>
+        <Link href="/about" passHref title="About">
           <h2>About</h2>
         </Link>
-        <Link href="/" passHref>
-          <h2>Work</h2>
-        </Link>
-        <div className={`dark-is-${darkMode[0] ? "on" : "off"}`} onClick={toggleDarkMode}>
+        <div className={`dark-is-${darkMode[0] ? "on" : "off"}`} onClick={toggleDarkMode} title="Toggle dark mode">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zm64 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z" />
           </svg>
