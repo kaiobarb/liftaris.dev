@@ -6,7 +6,7 @@ hero_image: 'https://assets.tina.io/260ec15c-da69-4817-9885-ad30c27199be/bloggin
 imgSrc: /alfons-taekema-bali.jpg
 ---
 
-![](https://assets.tina.io/260ec15c-da69-4817-9885-ad30c27199be/blogging.jpg "Starting my site squarely in the very bottom-right of this graph.")
+![](https://assets.tina.io/260ec15c-da69-4817-9885-ad30c27199be/blogging.jpg "My first post: Scraping the dregs of the static gen basin")
 
 I have been creating websites for a long time. In third grade I touched HTML for the first time; there was a week-long after-school program that culminated in writing a page that was sent to sitting president at the time, George Bush. I wish I had access to it now, I would love to see it.
 
