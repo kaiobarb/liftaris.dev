@@ -55,7 +55,9 @@ profile: /profile.jpg
 
 # About Me
 
-##### Kaio Barbosa-Chifan Pronounced: Kai-o bar-Bow-suh key-Fawn
+##### Kaio Barbosa-Chifan
+
+##### Pronounced: Kai-o bar-Bow-suh key-Fawn
 
 I am a programmer and artist. \
 I like to make games, not finish projects, and be chill.
