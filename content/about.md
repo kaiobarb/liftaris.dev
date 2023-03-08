@@ -57,11 +57,11 @@ profile: /profile.jpg
 
 ##### Kaio Barbosa-Chifan
 
-##### Pronounced: Kai-o bar-Bow-suh key-Fawn
+##### (Kai-o bar-Bow-suh key-Fawn)
 
 I am a programmer and artist. \
 I like to make games, not finish projects, and be chill.
 
-I was born in California, and grew up in Natal, Brasil. I moved back to California when I was thirteen. I studied Computer Science at the beautiful campus of UC Santa Cruz.
+I was born in California, grew up in Natal, Brazil, returning to California at age 15. I studied Computer Science at the beautiful campus of UC Santa Cruz.
 
-In the past I have traveled a decent amount, and lived in a few different places, but in June 2021 I moved to Seattle where I live with my wife. I like to go on meandering walks, cook good food, and spend time climbing at the local bouldering gym.
+In the past I have traveled a decent amount, and lived in a few different countries, but in June 2021 I settled in Seattle where I live with my wife. I like to go on meandering walks, cook good food, and spend time climbing at the local bouldering gym.
