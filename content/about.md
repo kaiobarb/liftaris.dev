@@ -39,8 +39,7 @@ experience:
     dateEnd: '2022-02-01T08:00:00.000Z'
     showEndDate: true
     description: |
-      Taught over 1000 classes to english learners of all ages,\
-      from all over the world.
+      Taught over 1000 classes to English learners of all ages.
     hasPassed: true
   - title: UC Santa Cruz
     dateStart: '2015-09-01T07:00:00.000Z'
