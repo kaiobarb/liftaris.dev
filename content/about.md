@@ -6,7 +6,7 @@ experience:
     showEndDate: false
     description: |
       Want to influence what happens next in my life?\
-      Contact Me: kaiobarb@gmail.com
+      Contact me: kaiobarb@gmail.com
     hasPassed: false
   - title: Freelance Dev
     dateStart: '2022-11-06T07:00:00.000Z'
