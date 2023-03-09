@@ -1,12 +1,10 @@
 ---
 title: Building a Website
-author: 'Watson & Crick '
-date: '2019-07-10T16:04:44.000Z'
+author: 'Kaio'
+date: '2023-03-09T16:04:44.000Z'
 hero_image: 'https://assets.tina.io/260ec15c-da69-4817-9885-ad30c27199be/blogging.jpg'
 imgSrc: /alfons-taekema-bali.jpg
 ---
-
-![](https://assets.tina.io/260ec15c-da69-4817-9885-ad30c27199be/blogging.jpg "My first post: Scraping the dregs of the static gen basin")
 
 I have been creating websites for a long time. In third grade I touched HTML for the first time; there was a week-long after-school program that culminated in writing a page that was supposedly sent to the White House (I'm not really sure why). It's lost to the void of time, but I wish I had some way of seeing it now.
 

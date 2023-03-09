@@ -6,10 +6,10 @@ import glob from "glob"
 import Layout from "../../components/Layout"
 import { useTina } from 'tinacms/dist/react'
 import client from "../../.tina/__generated__/client"
-import { useEffect } from "react"
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 function reformatDate(fullDate) {
+  console.log(fullDate)
   const date = new Date(fullDate)
   return date.toDateString().slice(4)
 }
@@ -29,7 +29,7 @@ export default function BlogTemplate(props) {
             width="800"
             height="450"
             src={data.post ? data.post.hero_image : ""}
-            alt={`blog_hero_${data.post ? data.post.title : "fallback title"}`}
+            alt={data.post ? data.post.title : "No Title"}
           />
         </figure>
         <div className={styles.blog__info}>
@@ -74,7 +74,6 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   // getting all .md files from the posts directory
   const blogs = glob.sync(`content/posts/**/*.md`)
-  // console.log(blogs);
 
   // converting the file names to their slugs
   const blogSlugs = blogs.map(file =>
@@ -87,7 +86,6 @@ export async function getStaticPaths() {
 
   // creating a path for each of the `slug` parameter
   const paths = blogSlugs.map(slug => { return { params: { slug: slug } } })
-  console.log(paths)
 
   return {
     paths,

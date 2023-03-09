@@ -1,7 +1,6 @@
 import Link from "next/link"
 import styles from "../styles/BlogList.module.css"
 import Image from "next/image"
-import { useEffect } from "react"
 
 function truncateSummary(content) {
   return content.slice(0, 200).trimEnd()
@@ -19,7 +18,6 @@ const BlogList = ({ allBlogs }) => {
         <h2>
           Posts
         </h2>
-        {/* <h3 style={{marginBottom: 10}}>There {allBlogs.length == 1 ? `is ${allBlogs.length} post`: `are ${allBlogs.length} posts`}</h3> */}
       </div>
       <ul>
         {allBlogs && allBlogs.length > 0 &&

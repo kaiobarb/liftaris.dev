@@ -33,6 +33,18 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            required: true,
+            ui: {
+              dateFormat: "DD MM yy",
+              defaultItem: {
+                date: new Date(),
+              },
+            }
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body",

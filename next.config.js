@@ -13,4 +13,14 @@ module.exports = {
     return config
 
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.tina.io',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 }
