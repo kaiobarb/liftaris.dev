@@ -65,10 +65,10 @@ export default function Header(props) {
         </div>
         <div style={{height:"40px"}}/>
         <Link target="_blank" href="https://www.github.com/kaiobarb" passHref title="Github">
-          <Image className="no-invert" src="/../public/icons/githublogo.png" alt="Github" width="52" height="52" />
+          <Image className="no-invert" src="/icons/githublogo.png" alt="Github" width="52" height="52" />
         </Link>
         <Link target="_blank" href="https://www.twitter.com/Liftaris1" passHref title="Twitter">
-          <Image className="no-invert" src="/../public/icons/twitterlogo.png" alt="Twitter" width="32" height="32" />
+          <Image className="no-invert" src="/icons/twitterlogo.png" alt="Twitter" width="32" height="32" />
         </Link>
         <div style={{height:"80%"}}/>
       </nav>
