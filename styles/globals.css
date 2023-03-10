@@ -32,6 +32,10 @@ body {
     .dark img {
         filter: invert(100%);
     }
+
+    .dark img.no-invert {
+        filter: invert(0);
+    }
 }
 
 a {
