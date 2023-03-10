@@ -13,17 +13,21 @@ export default function Header(props) {
       let OSLikesDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       darkMode[1](OSLikesDark);
       localStorage.setItem("darkMode", OSLikesDark);
-      if (OSLikesDark) {
-        document.body.classList.add("dark")
-      } else {
-        document.body.classList.remove("dark")
-      }
+      console.log("dark mode preference set to " + OSLikesDark);
+      // if (OSLikesDark) {
+      //   document.body.classList.add("dark")
+      // } else {
+      //   document.body.classList.remove("dark")
+      // }
     } else if (localStorage.getItem("darkMode") === "true") {
+      darkMode[1](true);
+      console.log("dark mode preference found in local storage, and it is true");
       document.body.classList.add("dark")
     }
   }, [])
 
   useEffect(() => {
+    console.log(darkMode[0]);
     if (darkMode[0]) {
       document.body.classList.add("dark")
     } else {
