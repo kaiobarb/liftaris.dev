@@ -56,10 +56,10 @@ profile: /profile.jpg
 
 ##### Kaio Barbosa-Chifan
 
-##### (Kai-o bar-Bow-suh key-Fawn)
+##### (Kye-o bar-Bow-suh key-Fawn)
 
 I am a programmer and artist. \
-I like to make games, not finish projects, and be chill.
+I like to make games, dabble in many things at once, and be chill.
 
 I was born in California, grew up in Natal, Brazil, returning to California at age 15. I studied Computer Science at the beautiful campus of UC Santa Cruz.
 
