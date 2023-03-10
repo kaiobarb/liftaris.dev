@@ -14,7 +14,7 @@ experience:
     dateEnd: '2023-02-06T08:00:00.000Z'
     showEndDate: true
     description: |
-      Building games in Unity3D and Godot.\
+      Building games in Unity3D and Godot\
       Building websites with React
     hasPassed: false
   - title: Health Note
