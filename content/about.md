@@ -18,7 +18,7 @@ experience:
       Building websites with React
     hasPassed: false
   - title: Health Note
-    dateStart: '2022-02-01T08:00:00.000Z'
+    dateStart: '2022-01-01T08:00:00.000Z'
     showStartDate: true
     dateEnd: '2022-11-01T07:00:00.000Z'
     showEndDate: true
