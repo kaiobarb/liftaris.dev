@@ -26,7 +26,7 @@ experience:
       Full Stack Engineer
     hasPassed: true
   - title: Parsons Corporation
-    dateStart: '2021-06-01T07:00:00.000Z'
+    dateStart: '2021-03-01T08:00:00.000Z'
     showStartDate: true
     dateEnd: '2022-02-01T08:00:00.000Z'
     showEndDate: true
