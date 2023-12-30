@@ -14,11 +14,14 @@ experience:
   - title: Freelance Dev
     dateStart: '2022-11-06T07:00:00.000Z'
     showStartDate: true
-    dateEnd: '2023-02-06T08:00:00.000Z'
+    dateEnd: '2023-06-01T07:00:00.000Z'
     showEndDate: true
     description: |
-      Building games in Unity3D and Godot\
-      Building websites with React
+      Jack of all trades, master of some.\
+      Did a variety of contracts, including \
+      \- Standing up websites from scratch\
+      \- Game development in Unity and Godot\
+      \- Assisting some very interesting AI projects
     hasPassed: true
   - title: Health Note
     dateStart: '2022-01-01T08:00:00.000Z'
