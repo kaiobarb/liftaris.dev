@@ -1,12 +1,15 @@
 ---
 experience:
-  - title: Let's find out!
-    dateStart: '0000-01-01T07:52:58.000Z'
-    dateEnd: '0000-02-01T07:52:58.000Z'
+  - title: Moderna
+    dateStart: '2023-06-01T07:00:00.000Z'
+    showStartDate: true
+    dateEnd: '2023-02-01T08:00:00.000Z'
     showEndDate: false
     description: |
-      Want to influence what happens next in my life?\
-      Contact me: kaiobarb@gmail.com
+      SDE II
+
+      Building and maintaining marketing websites.\
+      Working on AI powered translation and localization
     hasPassed: false
   - title: Freelance Dev
     dateStart: '2022-11-06T07:00:00.000Z'
