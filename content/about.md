@@ -19,7 +19,7 @@ experience:
     description: |
       Building games in Unity3D and Godot\
       Building websites with React
-    hasPassed: false
+    hasPassed: true
   - title: Health Note
     dateStart: '2022-01-01T08:00:00.000Z'
     showStartDate: true
