@@ -6,8 +6,6 @@ hero_image: /LSystemN3.gif
 imgSrc: /alfons-taekema-bali.jpg
 ---
 
-*The following is recounting of my experience going through materials and gathering understanding. I will likely get some things wrong.*
-
 This week, I made a point to dive into something I've held an interest in for a long time, prodded on by the rediscovery of the book "[The Algorithmic Beauty of Plants](algorithmicbotany.org/papers/abop/abop.pdf)" whose mere title made such an impact that I have not been able to forget about it. It is a textbook all about the fascinating world of modeling plants algorithmically.&#x20;
 
 I could go on about all the things I want to do related to the topic of the textbook, but before I go on too long of a tangent, I'm going to stop myself short, and discuss (mostly for my own sake) the first framework needed to understand algorithmic plant modeling: L Systems.
@@ -133,4 +131,3 @@ These images demonstrate the iterative nature of L-Systems, where each iteration
 The code I wrote for this post can be found here: [https://github.com/kaiobarb/LSystems](https://github.com/kaiobarb/LSystems)
 
 Thanks for reading!
-
