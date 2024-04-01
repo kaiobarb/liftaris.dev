@@ -21,7 +21,7 @@ experience:
       Did a variety of contracts, including \
       \- Standing up websites from scratch\
       \- Game development in Unity and Godot\
-      \- Assisting some very interesting AI projects
+      \- Assisting in some very interesting AI projects
     hasPassed: true
   - title: Health Note
     dateStart: '2022-01-01T08:00:00.000Z'
