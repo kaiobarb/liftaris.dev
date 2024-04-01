@@ -19,9 +19,8 @@ experience:
     description: |
       Jack of all trades, master of some.\
       Did a variety of contracts, including \
-      \- Standing up websites from scratch\
-      \- Game development in Unity and Godot\
-      \- Assisting in some very interesting AI projects
+      \- Full stack web-development \
+      \- Prototyping AI projects
     hasPassed: true
   - title: Health Note
     dateStart: '2022-01-01T08:00:00.000Z'
