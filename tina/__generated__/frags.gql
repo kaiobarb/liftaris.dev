@@ -1,0 +1,23 @@
+fragment PostParts on Post {
+  __typename
+  title
+  date
+  body
+  hero_image
+}
+
+fragment AboutParts on About {
+  __typename
+  profile
+  body
+  experience {
+    __typename
+    title
+    dateStart
+    showStartDate
+    dateEnd
+    showEndDate
+    description
+    hasPassed
+  }
+}

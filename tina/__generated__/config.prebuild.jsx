@@ -1,21 +1,19 @@
+// tina/config.ts
 import { defineConfig } from "tinacms";
-
-// Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
-
-export default defineConfig({
+var branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+var config_default = defineConfig({
   branch,
-  clientId: process.env.clientId,
-  token: process.env.token,
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: "public"
   },
   media: {
     tina: {
       mediaRoot: "",
-      publicFolder: "public",
-    },
+      publicFolder: "public"
+    }
   },
   schema: {
     collections: [
@@ -30,7 +28,7 @@ export default defineConfig({
             name: "title",
             label: "Title",
             isTitle: true,
-            required: true,
+            required: true
           },
           {
             type: "datetime",
@@ -38,43 +36,43 @@ export default defineConfig({
             label: "Date",
             required: true,
             ui: {
-              dateFormat: "DD MM yy",
-              defaultItem: {
-                date: new Date(),
-              },
+              dateFormat: "DD MM yy"
             }
           },
           {
             type: "rich-text",
             name: "body",
             label: "Body",
-            isBody: true,
+            isBody: true
           },
           {
-            type: 'image',
-            label: 'Hero image',
-            name: 'hero_image',
-          },
+            type: "image",
+            label: "Hero image",
+            name: "hero_image"
+          }
         ],
         ui: {
-          router: ({ document }) => `/blog/${document._sys.filename}`,
-        },
+          router: ({ document }) => `/blog/${document._sys.filename}`
+        }
       },
       {
         name: "about",
         label: "About",
         path: "content",
+        match: {
+          include: "about"
+        },
         fields: [
           {
             name: "profile",
             label: "Profile",
-            type: "image",
+            type: "image"
           },
           {
             name: "body",
             label: "Body",
             type: "rich-text",
-            isBody: true,
+            isBody: true
           },
           {
             name: "experience",
@@ -85,21 +83,21 @@ export default defineConfig({
               // This allows the customization of the list item UI
               // Data can be accessed by item?.<Name of field>
               itemProps: (item) => {
-                return { label: `${item?.title}` }
+                return { label: `${item?.title}` };
               },
               // Setting a default will auto-populate new items with the given values
               defaultItem: {
                 title: "Item",
-                dateStart: new Date(),
-                dateEnd: new Date(),
+                dateStart: /* @__PURE__ */ new Date(),
+                dateEnd: /* @__PURE__ */ new Date(),
                 description: ""
-              },
+              }
             },
             fields: [
               {
                 label: "Title",
                 name: "title",
-                type: "string",
+                type: "string"
               },
               {
                 label: "Date Start",
@@ -107,19 +105,13 @@ export default defineConfig({
                 type: "datetime",
                 required: false,
                 ui: {
-                  dateFormat: "MM yy",
+                  dateFormat: "MM yy"
                 }
               },
               {
                 label: "Show Start Date",
                 name: "showStartDate",
-                component: "toggle",
-                type: "boolean",
-                ui: {
-                  defaultItem: {
-                    showStartDate: true,
-                  },
-                }
+                type: "boolean"
               },
               {
                 label: "Date End",
@@ -127,38 +119,34 @@ export default defineConfig({
                 type: "datetime",
                 required: false,
                 ui: {
-                  dateFormat: "MM yy",
+                  dateFormat: "MM yy"
                 }
               },
               {
                 label: "Show End Date",
                 name: "showEndDate",
-                component: "toggle",
-                type: "boolean",
-                ui: {
-                  defaultItem: {
-                    showEndDate: true,
-                  },
-                }
+                type: "boolean"
               },
               {
                 label: "Description",
                 name: "description",
-                type: "rich-text",
+                type: "rich-text"
               },
               {
                 label: "Has Passed",
                 name: "hasPassed",
-                component: "toggle",
                 type: "boolean"
               }
-            ],
-          },
+            ]
+          }
         ],
         ui: {
-          router: ({ document }) => '/about',
-        },
-      },
-    ],
-  },
+          router: ({ document }) => "/about"
+        }
+      }
+    ]
+  }
 });
+export {
+  config_default as default
+};

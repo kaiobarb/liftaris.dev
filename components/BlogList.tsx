@@ -2,16 +2,27 @@ import Link from "next/link"
 import styles from "../styles/BlogList.module.css"
 import Image from "next/image"
 
-function truncateSummary(content) {
-  return content.slice(0, 200).trimEnd()
-}
-
-function reformatDate(fullDate) {
+function reformatDate(fullDate: string): string {
   const date = new Date(fullDate)
   return date.toDateString().slice(4)
 }
 
-const BlogList = ({ allBlogs }) => {
+interface BlogPost {
+  frontmatter: {
+    title: string
+    date: string
+    hero_image: string
+    [key: string]: unknown
+  }
+  markdownBody: string
+  filename: string
+}
+
+interface BlogListProps {
+  allBlogs: BlogPost[]
+}
+
+export default function BlogList({ allBlogs }: BlogListProps) {
   return (
     <div className={styles.bloglist}>
       <div className={styles.bloglist__header}>
@@ -43,5 +54,3 @@ const BlogList = ({ allBlogs }) => {
     </div>
   )
 }
-
-export default BlogList
