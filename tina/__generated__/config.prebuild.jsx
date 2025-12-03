@@ -59,6 +59,7 @@ var config_default = defineConfig({
         name: "about",
         label: "About",
         path: "content",
+        format: "md",
         match: {
           include: "about"
         },
@@ -130,7 +131,10 @@ var config_default = defineConfig({
               {
                 label: "Description",
                 name: "description",
-                type: "rich-text"
+                type: "string",
+                ui: {
+                  component: "textarea"
+                }
               },
               {
                 label: "Has Passed",

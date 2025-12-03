@@ -40,7 +40,7 @@ export default function About(props: AboutProps) {
             <li key={i} className={exp.hasPassed ? styles.hasPassed : ''}>
               <h2>{exp.title}</h2>
                 <h3> {exp.showStartDate && reformatDate(exp.dateStart)}{exp.showEndDate && ` - ${reformatDate(exp.dateEnd)}`}</h3>
-              <TinaMarkdown content={exp?.description as TinaMarkdownContent} />
+              <p style={{ whiteSpace: 'pre-line' }}>{exp?.description}</p>
             </li>
           ))}
           <li className={styles.about__listEnd} />

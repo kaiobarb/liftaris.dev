@@ -152,7 +152,7 @@ type AboutExperience {
   showStartDate: Boolean
   dateEnd: String
   showEndDate: Boolean
-  description: JSON
+  description: String
   hasPassed: Boolean
 }
 
@@ -176,7 +176,7 @@ input AboutExperienceFilter {
   showStartDate: BooleanFilter
   dateEnd: DatetimeFilter
   showEndDate: BooleanFilter
-  description: RichTextFilter
+  description: StringFilter
   hasPassed: BooleanFilter
 }
 
@@ -233,7 +233,7 @@ input AboutExperienceMutation {
   showStartDate: Boolean
   dateEnd: String
   showEndDate: Boolean
-  description: JSON
+  description: String
   hasPassed: Boolean
 }
 

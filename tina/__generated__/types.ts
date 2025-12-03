@@ -249,7 +249,7 @@ export type AboutExperience = {
   showStartDate?: Maybe<Scalars['Boolean']['output']>;
   dateEnd?: Maybe<Scalars['String']['output']>;
   showEndDate?: Maybe<Scalars['Boolean']['output']>;
-  description?: Maybe<Scalars['JSON']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
   hasPassed?: Maybe<Scalars['Boolean']['output']>;
 };
 
@@ -274,7 +274,7 @@ export type AboutExperienceFilter = {
   showStartDate?: InputMaybe<BooleanFilter>;
   dateEnd?: InputMaybe<DatetimeFilter>;
   showEndDate?: InputMaybe<BooleanFilter>;
-  description?: InputMaybe<RichTextFilter>;
+  description?: InputMaybe<StringFilter>;
   hasPassed?: InputMaybe<BooleanFilter>;
 };
 
@@ -391,7 +391,7 @@ export type AboutExperienceMutation = {
   showStartDate?: InputMaybe<Scalars['Boolean']['input']>;
   dateEnd?: InputMaybe<Scalars['String']['input']>;
   showEndDate?: InputMaybe<Scalars['Boolean']['input']>;
-  description?: InputMaybe<Scalars['JSON']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
   hasPassed?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
@@ -403,7 +403,7 @@ export type AboutMutation = {
 
 export type PostPartsFragment = { __typename: 'Post', title: string, date: string, body?: any | null, hero_image?: string | null };
 
-export type AboutPartsFragment = { __typename: 'About', profile?: string | null, body?: any | null, experience?: Array<{ __typename: 'AboutExperience', title?: string | null, dateStart?: string | null, showStartDate?: boolean | null, dateEnd?: string | null, showEndDate?: boolean | null, description?: any | null, hasPassed?: boolean | null } | null> | null };
+export type AboutPartsFragment = { __typename: 'About', profile?: string | null, body?: any | null, experience?: Array<{ __typename: 'AboutExperience', title?: string | null, dateStart?: string | null, showStartDate?: boolean | null, dateEnd?: string | null, showEndDate?: boolean | null, description?: string | null, hasPassed?: boolean | null } | null> | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -429,7 +429,7 @@ export type AboutQueryVariables = Exact<{
 }>;
 
 
-export type AboutQuery = { __typename?: 'Query', about: { __typename: 'About', id: string, profile?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experience?: Array<{ __typename: 'AboutExperience', title?: string | null, dateStart?: string | null, showStartDate?: boolean | null, dateEnd?: string | null, showEndDate?: boolean | null, description?: any | null, hasPassed?: boolean | null } | null> | null } };
+export type AboutQuery = { __typename?: 'Query', about: { __typename: 'About', id: string, profile?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experience?: Array<{ __typename: 'AboutExperience', title?: string | null, dateStart?: string | null, showStartDate?: boolean | null, dateEnd?: string | null, showEndDate?: boolean | null, description?: string | null, hasPassed?: boolean | null } | null> | null } };
 
 export type AboutConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -441,7 +441,7 @@ export type AboutConnectionQueryVariables = Exact<{
 }>;
 
 
-export type AboutConnectionQuery = { __typename?: 'Query', aboutConnection: { __typename?: 'AboutConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutConnectionEdges', cursor: string, node?: { __typename: 'About', id: string, profile?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experience?: Array<{ __typename: 'AboutExperience', title?: string | null, dateStart?: string | null, showStartDate?: boolean | null, dateEnd?: string | null, showEndDate?: boolean | null, description?: any | null, hasPassed?: boolean | null } | null> | null } | null } | null> | null } };
+export type AboutConnectionQuery = { __typename?: 'Query', aboutConnection: { __typename?: 'AboutConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AboutConnectionEdges', cursor: string, node?: { __typename: 'About', id: string, profile?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experience?: Array<{ __typename: 'AboutExperience', title?: string | null, dateStart?: string | null, showStartDate?: boolean | null, dateEnd?: string | null, showEndDate?: boolean | null, description?: string | null, hasPassed?: boolean | null } | null> | null } | null } | null> | null } };
 
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
