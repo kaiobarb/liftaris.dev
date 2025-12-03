@@ -34,6 +34,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# tina client (has machine-specific paths)
+tina/__generated__/client.ts
+tina/__generated__/.cache
+
 # IntelliJ IDEA
 .idea
 
