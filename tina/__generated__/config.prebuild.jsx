@@ -89,8 +89,6 @@ var config_default = defineConfig({
               // Setting a default will auto-populate new items with the given values
               defaultItem: {
                 title: "Item",
-                dateStart: /* @__PURE__ */ new Date(),
-                dateEnd: /* @__PURE__ */ new Date(),
                 description: ""
               }
             },

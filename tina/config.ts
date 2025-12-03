@@ -91,8 +91,6 @@ export default defineConfig({
               // Setting a default will auto-populate new items with the given values
               defaultItem: {
                 title: "Item",
-                dateStart: new Date(),
-                dateEnd: new Date(),
                 description: ""
               },
             },
