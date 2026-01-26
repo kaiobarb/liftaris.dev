@@ -28,7 +28,7 @@ async function getBlogPosts(): Promise<BlogPost[]> {
   const postsDirectory = path.join(process.cwd(), 'content/posts')
   const filenames = fs.readdirSync(postsDirectory).filter(f => f.endsWith('.md'))
 
-  return filenames.map((filename) => {
+  const posts = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename)
     const fileContents = fs.readFileSync(filePath, 'utf8')
     const document = matter(fileContents)
@@ -43,6 +43,13 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       markdownBody: document.content,
       filename: filename.replace(/\.md$/, ''),
     }
+  })
+
+  // Sort by date descending (most recent first)
+  return posts.sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date).getTime()
+    const dateB = new Date(b.frontmatter.date).getTime()
+    return dateB - dateA
   })
 }
 
