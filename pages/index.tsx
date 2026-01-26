@@ -51,8 +51,15 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
     const fileContents = fs.readFileSync(filePath, 'utf8')
     const document = matter(fileContents)
 
+    const frontmatter = {
+      ...document.data,
+      date: document.data.date instanceof Date
+        ? document.data.date.toISOString()
+        : document.data.date,
+    } as BlogPost['frontmatter']
+
     return {
-      frontmatter: document.data as BlogPost['frontmatter'],
+      frontmatter,
       markdownBody: document.content,
       filename: filename.replace(/\.md$/, ''),
     }
