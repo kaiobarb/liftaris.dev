@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useEffect } from 'react'
 import styles from '../styles/Canvas.module.css'
 import { Point, Joint } from './Canvas/Blob'
