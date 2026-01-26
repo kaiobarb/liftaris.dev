@@ -41,4 +41,4 @@ tina/__generated__/.cache
 # IntelliJ IDEA
 .idea
 
-node_modules
+node_modulesstyles/output.css

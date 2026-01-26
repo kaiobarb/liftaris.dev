@@ -2,8 +2,9 @@
   "name": "nextjs-starter-blog",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build && next build",
+    "dev": "npm run dev:css & tinacms dev -c \"next dev\"",
+    "dev:css": "npx @tailwindcss/cli -i ./styles/globals.css -o ./styles/output.css --watch",
+    "build": "tinacms build && npx @tailwindcss/cli -i ./styles/globals.css -o ./styles/output.css && next build",
     "start": "tinacms build && next start",
     "lint": "next lint"
   },
@@ -18,11 +19,13 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
+    "@tailwindcss/cli": "^4.1.18",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.6",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5.9.3"
   }
 }
