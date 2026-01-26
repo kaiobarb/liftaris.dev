@@ -46,6 +46,20 @@ export default defineConfig({
             name: "body",
             label: "Body",
             isBody: true,
+            parser: {
+              type: "mdx",
+            },
+            templates: [
+              {
+                name: "ThemeImage",
+                label: "Theme Image",
+                fields: [
+                  { name: "lightSrc", label: "Light Mode Image", type: "image" },
+                  { name: "darkSrc", label: "Dark Mode Image", type: "image" },
+                  { name: "alt", label: "Alt Text", type: "string" },
+                ],
+              },
+            ],
           },
           {
             type: 'image',

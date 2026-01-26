@@ -115,12 +115,6 @@ input DatetimeFilter {
   in: [String]
 }
 
-input RichTextFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-}
-
 input ImageFilter {
   startsWith: String
   eq: String
@@ -128,10 +122,20 @@ input ImageFilter {
   in: [String]
 }
 
+input PostBodyThemeImageFilter {
+  lightSrc: ImageFilter
+  darkSrc: ImageFilter
+  alt: StringFilter
+}
+
+input PostBodyFilter {
+  ThemeImage: PostBodyThemeImageFilter
+}
+
 input PostFilter {
   title: StringFilter
   date: DatetimeFilter
-  body: RichTextFilter
+  body: PostBodyFilter
   hero_image: ImageFilter
 }
 
@@ -163,6 +167,12 @@ type About implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input RichTextFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
 }
 
 input BooleanFilter {

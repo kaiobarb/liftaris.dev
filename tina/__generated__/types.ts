@@ -209,12 +209,6 @@ export type DatetimeFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type RichTextFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
 export type ImageFilter = {
   startsWith?: InputMaybe<Scalars['String']['input']>;
   eq?: InputMaybe<Scalars['String']['input']>;
@@ -222,10 +216,20 @@ export type ImageFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type PostBodyThemeImageFilter = {
+  lightSrc?: InputMaybe<ImageFilter>;
+  darkSrc?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
+export type PostBodyFilter = {
+  ThemeImage?: InputMaybe<PostBodyThemeImageFilter>;
+};
+
 export type PostFilter = {
   title?: InputMaybe<StringFilter>;
   date?: InputMaybe<DatetimeFilter>;
-  body?: InputMaybe<RichTextFilter>;
+  body?: InputMaybe<PostBodyFilter>;
   hero_image?: InputMaybe<ImageFilter>;
 };
 
@@ -261,6 +265,12 @@ export type About = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type RichTextFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 export type BooleanFilter = {
@@ -645,7 +655,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/2.0/content/260ec15c-da69-4817-9885-ad30c27199be/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

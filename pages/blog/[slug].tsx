@@ -5,7 +5,8 @@ import styles from "../../styles/Blog.module.css"
 import Layout from "../../components/Layout"
 import { useTina } from 'tinacms/dist/react'
 import client from "../../tina/__generated__/client"
-import { TinaMarkdown, TinaMarkdownContent } from "tinacms/dist/rich-text"
+import { TinaMarkdown, TinaMarkdownContent, Components } from "tinacms/dist/rich-text"
+import ThemeImage from "../../components/ThemeImage"
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import type { PostQuery, PostQueryVariables } from "../../tina/__generated__/types"
 
@@ -20,6 +21,14 @@ interface BlogTemplateProps {
   query: string
   variables: PostQueryVariables
   siteTitle: string
+}
+
+const components: Components<{
+  ThemeImage: { lightSrc: string; darkSrc: string; alt: string }
+}> = {
+  ThemeImage: (props) => (
+    <ThemeImage lightSrc={props.lightSrc} darkSrc={props.darkSrc} alt={props.alt} />
+  ),
 }
 
 export default function BlogTemplate(props: BlogTemplateProps) {
@@ -38,6 +47,7 @@ export default function BlogTemplate(props: BlogTemplateProps) {
             height={450}
             src={data.post?.hero_image || ""}
             alt={data.post?.title || "No Title"}
+            style={{ width: "100%", height: "auto" }}
           />
         </figure>
         <div className={styles.blog__info}>
@@ -45,7 +55,7 @@ export default function BlogTemplate(props: BlogTemplateProps) {
           <h3>{reformatDate(data.post?.date || "NO DATE")}</h3>
         </div>
         <div className={styles.blog__body}>
-          <TinaMarkdown content={data.post?.body as TinaMarkdownContent} />
+          <TinaMarkdown content={data.post?.body as TinaMarkdownContent} components={components} />
         </div>
       </article>
     </Layout>
