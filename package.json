@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tinacms/cli": "^2.0.1",
+    "@vercel/analytics": "^1.6.1",
     "gray-matter": "^4.0.3",
     "next": "^16.0.7",
     "react": "^19.2.1",

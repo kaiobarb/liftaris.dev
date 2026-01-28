@@ -1,6 +1,7 @@
 import { Spectral } from "next/font/google";
 import "../styles/output.css";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 const spectral = Spectral({
   weight: ["400", "700"],
@@ -22,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={spectral.variable}>
-      <body className={spectral.className}>{children}</body>
+      <body className={spectral.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
