@@ -1,6 +1,6 @@
 # liftaris.dev
 
-Kaio Barbosa-Chifan's portfolio, built with Next.js, React, TypeScript, and TinaCMS.
+Kaio Barbosa's portfolio, built with Next.js, React, TypeScript, and TinaCMS.
 
 ## Setup
 

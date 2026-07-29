@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostData(slug);
-  return { title: `${post.data.post?.title || "Post"} | Kaio Barbosa-Chifan` };
+  return { title: `${post.data.post?.title || "Post"} | Kaio Barbosa` };
 }
 
 export default async function BlogPost({ params }: PageProps) {

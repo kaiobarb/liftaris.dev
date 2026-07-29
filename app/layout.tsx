@@ -11,7 +11,7 @@ const serif = Young_Serif({ subsets: ["latin"], variable: "--font-serif", weight
 const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Kaio Barbosa-Chifan",
+  title: "Kaio Barbosa",
   description: "Software engineer building BazaarGhost and Herm TUI.",
 };
 

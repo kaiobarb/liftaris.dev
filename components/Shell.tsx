@@ -57,7 +57,7 @@ export function Shell({ posts, children }: ShellProps) {
 
       <div className="identity">
         <button ref={nameRef} className="name" onClick={() => go("/")} aria-label="Home">
-          <h1><span>Kaio</span><span>Barbosa</span><span>-</span><span>Chifan</span></h1>
+          <h1><span>Kaio</span><span>Barbosa</span></h1>
         </button>
       </div>
 
